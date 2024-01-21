@@ -1,0 +1,24 @@
+.TodoBody{
+    background-color: #DAFCF4;
+}
+
+.hr-lines{
+    position: relative;
+    /*  new lines  */
+    margin: auto auto;
+    text-align: center;
+  }
+
+.TodoList{
+    max-height:200px;
+    height:150px;
+    overflow: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.TodoList::-webkit-scrollbar{
+    display: none;
+}
+
+
