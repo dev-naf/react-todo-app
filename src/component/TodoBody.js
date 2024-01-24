@@ -26,9 +26,10 @@ const TodoBody = () => {
       .then((res) => {
         if (!res.ok) throw Error(`Server said ${res.status} Error :-(`);
         return res.json();
+
       })
-      .then((data) => {
-        setData(data);
+      .then((Data) => {
+        setData(Data.newData);
         setPending(false);
       })
       .catch((err) => {
@@ -41,7 +42,7 @@ const TodoBody = () => {
     // [! refresh interval, testing Purposes]
     const refreshInterval = setInterval(() => {
       refreshData();
-    }, 100);
+    }, 1000);
 
     // Clean komponen
     return () => clearInterval(refreshData)
